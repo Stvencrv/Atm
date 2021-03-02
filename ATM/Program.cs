@@ -5,10 +5,10 @@ namespace ATM
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
-            MenuPrincipal.MenuPrinci();
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.MenuPrinci();
         }
     }
 }

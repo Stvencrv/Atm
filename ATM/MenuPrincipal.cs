@@ -12,47 +12,49 @@ namespace ATM
             {
                 Console.Clear();
                 int menu = 0;
+                int opcion = 0;
 
+                Submenu submenus = new Submenu();
                 Console.WriteLine("Seleccione la opcion deseada \n1,Metodo de dispensacion \n2.Retirar Dinero\n3Salir");
                 menu = Convert.ToInt32(Console.ReadLine());
 
                 switch (menu)
                 {
                     case 1:
-
+                        submenus.SubMenus();
                         break;
                     case 2:
-                        Console.WriteLine("Ingrese el monto a retirar: ");
+                        Console.WriteLine("Introduzca la cantidad a sacar: ");
                         int monto = Convert.ToInt32(Console.ReadLine());
                         Dispensacion tipos = new Dispensacion(monto);
                         if (monto % 100 == 0)
                         {
-                            switch (op)
+                            switch (opcion)
                             {
                                 case 1:
                                     tipos.metodo1();
                                     break;
                                 case 2:
-                                    tipos.();
+                                    tipos.metodo2();
                                     break;
                                 case 3:
-                                    tipos.();
+                                    tipos.metodo3();
                                     break;
                                 default:
-                                    tipos.();
+                                    tipos.metodo3();
                                     break;
                             }
                         }
                         else
                         {
-                            Console.WriteLine("El cajero no coje este tipo de billetes");
+                            Console.WriteLine("Este cajero no acepta este tipo de papeletas");
                             Console.ReadKey();
                             MenuPrinci();
                         }
                         
                         break;
                     case 3:
-                        Console.WriteLine("\nGracias por usar nuestro sistema!!");
+                        Console.WriteLine("\nGracias");
                         Console.ReadKey();
                        
                         break;
