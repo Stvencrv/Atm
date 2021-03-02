@@ -7,8 +7,9 @@ namespace ATM
     class Submenu
     {
         int op = 0;
-        public void SubMenu()
+        public void SubMenus()
         {
+            MenuPrincipal menu = new MenuPrincipal();
             Console.Clear();
             try
             {
@@ -19,31 +20,31 @@ namespace ATM
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("El modo de dispensacion se ha cambiado con exito");
+                        Console.WriteLine("El metodo de dispensacion se ha cambiado con exito");
                         op = 1;
                         break;
                     case 2:
-                        Console.WriteLine("El modo de dispensacion se ha cambiado con exito");
+                        Console.WriteLine("El metodo de dispensacion se ha cambiado con exito");
                         op = 2;
                         break;
                     case 3:
-                        Console.WriteLine("El modo de dispensacion se ha cambiado con exito");
+                        Console.WriteLine("El metodo de dispensacion se ha cambiado con exito");
                         op = 3;
                         break;
                     default:
                         Console.WriteLine("\nError, Esa opcion no es valida");
                         Console.ReadKey();
-                        SubMenu();
+                        menu.MenuPrinci();
                         break;
                 }
                 Console.ReadKey();
-                SubMenu();
+                menu.MenuPrinci();
             }
             catch (Exception)
             {
-                Console.WriteLine("\nError, Esa opcion no es valida");
+                Console.WriteLine("\nLa opcion no esta correcta");
                 Console.ReadKey();
-                SubMenu();
+                SubMenus();
             }
         }
     }
