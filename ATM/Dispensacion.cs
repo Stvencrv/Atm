@@ -96,10 +96,10 @@ namespace ATM
             cant = cant - 100;
         }
 
-        Console.WriteLine("\nPapeletas devueltas (1000): " + cont);
-        Console.WriteLine("Papeletas devueltas (500): " + cont1);
-        Console.WriteLine("Papeletas devueltas (200): " + cont2);
-        Console.WriteLine("Papeletas devueltas (100): " + cont3);
+        Console.WriteLine("\nBilletes recibidos (1000): " + cont);
+        Console.WriteLine("Billetes recibidos (500): " + cont1);
+        Console.WriteLine("Billetes recibidos (200): " + cont2);
+        Console.WriteLine("Billetes recibidos (100): " + cont3);
         Console.ReadKey();
         menu = new MenuPrincipal();
         menu.MenuPrinci();
